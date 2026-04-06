@@ -17,7 +17,7 @@ form.addEventListener('submit', function(e) {
     let cidade = document.getElementById('cidade').value.trim();
     let estado = document.getElementById('estado').value.trim();
 
-    // Validações
+    
     if (!nome.includes(" ")) {
         mensagem.innerHTML = "Digite nome e sobrenome";
         return;
@@ -48,7 +48,7 @@ form.addEventListener('submit', function(e) {
         return;
     }
 
-    // Criar objeto
+
     let doador = {
         nome,
         email,
@@ -60,12 +60,12 @@ form.addEventListener('submit', function(e) {
         estado
     };
 
-    // Salvar no array
+    
     doadores.push(doador);
 
     console.log(doadores);
 
-    // Mostrar na tela
+   
     lista.innerHTML += `
         <p>${nome} - ${tipo}</p>
     `;
